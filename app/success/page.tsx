@@ -1,6 +1,6 @@
 "use client";
 import { useSearchParams } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
 function SuccessPage() {
@@ -38,11 +38,13 @@ function SuccessPage() {
   }, []);
 
   return (
-    <div className="h-screen flex items-center justify-center">
-      <p className="max-w-4xl text-center text-5xl font-bold ">
-        Thank you! Your Purchase was Successful 🎉
-      </p>
-    </div>
+    <Suspense>
+      <div className="h-screen flex items-center justify-center">
+        <p className="max-w-4xl text-center text-5xl font-bold ">
+          Thank you! Your Purchase was Successful 🎉
+        </p>
+      </div>
+    </Suspense>
   );
 }
 
