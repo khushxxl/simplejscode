@@ -35,7 +35,12 @@ export const WelcomeEmailTemplate = ({ email }: KoalaWelcomeEmailProps) => (
         <Text style={paragraph}>
           Thank you for your purchase, if you got any recommendation or require
           any support feel free to shoot me an email at
-          khushaal.choithramani@gmail.com
+          khushaal.choithramani@gmail.com 🏋️
+        </Text>
+        <Text style={paragraph}>
+          Note: This is the preorder version, in few weeks the databse content
+          would be finalised and added. Thank you for buying the pre-order
+          version and supporting us in building this 🪄
         </Text>
         <Section style={btnContainer}>
           <Button

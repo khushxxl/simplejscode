@@ -6,7 +6,7 @@ export async function paymentCheckout({ subscriberEmail }) {
     const getStripe = () => {
       if (!stripePromise) {
         stripePromise = loadStripe(
-          "pk_test_51PfezLFmDqFvsXm8oXniQ3cgd3Q6wCvfxZ5tCrVSWBIOqAuz9CIGH6NrfWPN6JQ4rl5vdTPWT2e813q8VEVIsa9O00q4oSWK1w"
+          "pk_live_51PfezLFmDqFvsXm8JKOhtk94ctA1kkIlXTX0GfgiAnMtHXKK74x8ck4We93aOwTwBdQsAKtd88OXr0zEExQq3Wga00dAHbp1wB"
         );
       }
       return stripePromise;
@@ -19,11 +19,11 @@ export async function paymentCheckout({ subscriberEmail }) {
         mode: "payment",
         lineItems: [
           {
-            price: "price_1Pff25FmDqFvsXm88TgHWsKl",
+            price: "price_1PgSKQFmDqFvsXm8ipJvcMNQ",
             quantity: 1,
           },
         ],
-        successUrl: `${window.location.origin}/success?success?session_id={CHECKOUT_SESSION_ID}?subscriberEmail=${subscriberEmail}`,
+        successUrl: `${window.location.origin}/success?subscriberEmail=${subscriberEmail}&success=true&session_id={CHECKOUT_SESSION_ID}`,
         cancelUrl: `${window.location.origin}/?canceled=true`,
       })
       .then((result) => {});

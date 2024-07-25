@@ -20,11 +20,11 @@ function Navbar() {
                 <p className="">Features</p>
               </div>
             </a>
-            <a href="#faq">
+            {/* <a href="#faq">
               <div className=" cursor-pointer">
                 <p className="">FAQ</p>
               </div>
-            </a>
+            </a> */}
             <a href="/#footer">
               <div className="bg-blue-700 cursor-pointer p-3 rounded-lg px-4 text-white">
                 <p className=" font-semibold">Buy Now</p>

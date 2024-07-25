@@ -10,6 +10,11 @@ function Hero() {
   const [subscriberEmail, setsubscriberEmail] = useState(
     "khushaal.choithramani@gmail.com"
   );
+
+  const searchParams = useSearchParams();
+
+  console.log("Check", searchParams.get("check"));
+
   const sendEmail = async () => {
     if (subscriberEmail) {
       await fetch("/api/email", {
@@ -64,8 +69,7 @@ function Hero() {
       className="max-w-6xl flex-col mx-auto w-full flex items-center mt-20"
     >
       <p className="max-w-4xl text-center text-5xl font-bold ">
-        A Curated Directory of Simple JS Code That You Can Copy Paste in Your
-        Projects
+        A Curated Directory of JS Code That You Can Copy Paste in Your Projects
       </p>
       {/* <Link href={"https://www.notion.so/"}>
         <div className="mt-4 underline flex items-center space-x-2">
@@ -79,8 +83,9 @@ function Hero() {
       </Link> */}
 
       <p className="max-w-4xl text-center text-2xl mt-20 font-semibold ">
-        A hand-picked collection of JS code snippets that's constantly updated,
-        and curated for you to include it in your next project.
+        A hand-picked collection of more than 150+ JS code snippets that's
+        constantly updated, and curated for you to include it in your next
+        project.
       </p>
 
       <div className=" flex flex-col justify-center items-center">

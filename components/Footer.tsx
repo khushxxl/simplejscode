@@ -6,11 +6,10 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { paymentCheckout } from "../utils/checkout";
+import toast from "react-hot-toast";
 
 function Footer() {
-  const [subscriberEmail, setsubscriberEmail] = useState(
-    "khushaal.choithramani@gmail.com"
-  );
+  const [subscriberEmail, setsubscriberEmail] = useState("");
   return (
     <div
       id="footer"
@@ -20,22 +19,28 @@ function Footer() {
         Get Access to the Database Today 🪄
       </p>
 
-      <div className=" bg-gradient-to-b from-sky-400 to-indigo-900 text-white max-w-md md:max-w-5xl space-y-3 w-full mt-10 rounded-2xl items-center flex flex-col justify-center h-[80vh] md:h-[50vh]">
+      <div className=" bg-gradient-to-b from-sky-400 to-indigo-900 text-white max-w-sm md:max-w-5xl space-y-3 w-full mt-10 rounded-2xl items-center flex flex-col justify-center h-[80vh] md:h-[50vh]">
         <h1 className="font-bold text-xl">Pre-Order Offer</h1>
         <h1 className="font-bold  text-3xl">One-Off Price for Lifetime</h1>
-        <div className="border max-w-sm w-full rounded-xl bg-white ">
+        <div className="border mt-2 max-w-xs w-full rounded-xl bg-white ">
           <input
+            onChange={(e) => setsubscriberEmail(e.target.value)}
             type="text"
             placeholder="Enter your email"
-            className="bg-transparent  w-fit flex flex-1 text-black p-2 outline-none focus:outline-none"
+            value={subscriberEmail}
+            className="bg-transparent  flex w-full flex-1 text-black p-2 outline-none focus:outline-none"
           />
         </div>
         <div className="bg-white  max-w-sm p-3 w-fit rounded cursor-pointer">
           <button
             onClick={() => {
-              paymentCheckout({
-                subscriberEmail: subscriberEmail,
-              });
+              if (subscriberEmail) {
+                paymentCheckout({
+                  subscriberEmail: subscriberEmail,
+                });
+              } else {
+                toast.error("Enter email to proceed");
+              }
             }}
           >
             <h1 className="font-semibold w-fit text-blue-600 text-sm">
