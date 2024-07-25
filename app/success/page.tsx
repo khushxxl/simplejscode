@@ -5,7 +5,7 @@ import React, { useEffect } from "react";
 import toast from "react-hot-toast";
 
 function SuccessPage() {
-  // const searchParams = useSearchParams();
+  const searchParams = useSearchParams();
   // const pathName = usePathname();
 
   // const sessionId = searchParams.get("session_id");
@@ -16,10 +16,7 @@ function SuccessPage() {
 
   const router = useRouter();
 
-  const keyValue = window.location.search;
-  const urlParams = new URLSearchParams(keyValue);
-
-  const subscriberEmail = urlParams.get("subscriberEmail");
+  const subscriberEmail = searchParams.get("subscriberEmail");
 
   const sendEmail = async () => {
     console.log("Email:", subscriberEmail);
