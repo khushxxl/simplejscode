@@ -1,3 +1,5 @@
+"use client";
+import { paymentCheckout } from "@/utils/checkout";
 import { Twitter } from "lucide";
 import { Unlock } from "lucide-react";
 import Image from "next/image";
@@ -14,7 +16,7 @@ function Footer() {
         Get Access to the Database Today 🪄
       </p>
 
-      <div className=" bg-gradient-to-b from-sky-400 to-indigo-900 text-white max-w-5xl space-y-3 w-full mt-10 rounded-2xl items-center flex flex-col justify-center h-[50vh]">
+      <div className=" bg-gradient-to-b from-sky-400 to-indigo-900 text-white max-w-md md:max-w-5xl space-y-3 w-full mt-10 rounded-2xl items-center flex flex-col justify-center h-[80vh] md:h-[50vh]">
         <h1 className="font-bold text-xl">Pre-Order Offer</h1>
         <h1 className="font-bold  text-3xl">One-Off Price for Lifetime</h1>
         <div className="border max-w-sm w-full rounded-xl bg-white ">
@@ -25,17 +27,11 @@ function Footer() {
           />
         </div>
         <div className="bg-white  max-w-sm p-3 w-fit rounded cursor-pointer">
-          <form
-            action="http://localhost:4242/create-checkout-session"
-            method="POST"
-            className=""
-          >
-            <button type="submit">
-              <h1 className="font-semibold w-fit text-blue-600 text-sm">
-                Pre order Now - <span className=" line-through">£20</span> £6
-              </h1>
-            </button>
-          </form>
+          <button onClick={paymentCheckout}>
+            <h1 className="font-semibold w-fit text-blue-600 text-sm">
+              Pre order Now - <span className=" line-through">£20</span> £6
+            </h1>
+          </button>
         </div>
       </div>
 
