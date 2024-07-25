@@ -5,8 +5,8 @@ import toast from "react-hot-toast";
 
 function SuccessPage() {
   const routerSearch = useSearchParams();
-  console.log(routerSearch.get("email"));
-  //   const subscriberEmail = routerSearch.get("email");
+  console.log(routerSearch.get("subscriberEmail"));
+  // const subscriberEmail = routerSearch.get("subscriberEmail");
   const subscriberEmail = "khushaal.choithramani@gmail.com";
 
   const sendEmail = async () => {
@@ -33,9 +33,9 @@ function SuccessPage() {
     }
   };
 
-  useEffect(() => {
-    sendEmail();
-  }, []);
+  // useEffect(() => {
+  //   sendEmail();
+  // }, []);
 
   return (
     <Suspense>

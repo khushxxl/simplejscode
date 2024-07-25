@@ -1,12 +1,16 @@
 "use client";
-import { paymentCheckout } from "@/utils/checkout";
+
 import { Twitter } from "lucide";
 import { Unlock } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import { paymentCheckout } from "../utils/checkout";
 
 function Footer() {
+  const [subscriberEmail, setsubscriberEmail] = useState(
+    "khushaal.choithramani@gmail.com"
+  );
   return (
     <div
       id="footer"
@@ -27,7 +31,13 @@ function Footer() {
           />
         </div>
         <div className="bg-white  max-w-sm p-3 w-fit rounded cursor-pointer">
-          <button onClick={paymentCheckout}>
+          <button
+            onClick={() => {
+              paymentCheckout({
+                subscriberEmail: subscriberEmail,
+              });
+            }}
+          >
             <h1 className="font-semibold w-fit text-blue-600 text-sm">
               Pre order Now - <span className=" line-through">£20</span> £6
             </h1>
