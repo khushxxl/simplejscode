@@ -1,14 +1,11 @@
 import { Stripe, loadStripe } from "@stripe/stripe-js";
 
 export async function paymentCheckout() {
-  const LIVE_PUBLIC_KEY: any = process.env.STRIPE_LIVE_KEY_PUBLIC;
-  const TEST_PUBLIC_KEY: any = process.env.STRIPE_TEST_KEY_PUBLIC;
-
-  let stripePromise: Promise<Stripe | null>;
+  let stripePromise;
   try {
     const getStripe = () => {
       if (!stripePromise) {
-        stripePromise = loadStripe(TEST_PUBLIC_KEY);
+        stripePromise = loadStripe(process.env.STRIPE_TEST_KEY_PUBLIC);
       }
       return stripePromise;
     };
