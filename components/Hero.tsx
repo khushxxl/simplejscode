@@ -6,6 +6,8 @@ import { useSearchParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
+// import Video from "../assets/demo.mp4";
+
 function Hero() {
   const [subscriberEmail, setsubscriberEmail] = useState(
     "khushaal.choithramani@gmail.com"
@@ -127,9 +129,20 @@ function Hero() {
 
       <div className="mx-10 max-w-5xl  mt-10 w-full  flex  flex-col justify-center md:h-[80vh] md:p-4 h-fit items-center  bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border p-0  rounded-xl">
         <iframe
-          className="max-w-4xl  rounded-lg mx-4  w-full border h-[70vh]"
-          src="https://www.notioniframe.com/notion/nxgy2bb0dj9"
+          allow="autoplay"
+          className="max-w-4xl  rounded-lg mx-4  w-full  h-[70vh]"
+          src="https://www.youtube.com/embed/YGpkSteQd5A?si=2JbWXecs9I-exSbO?autoplay=1&muted=1"
         ></iframe>
+
+        {/* <video
+          autoPlay
+          controls
+          loop
+          style={{ width: "500px", height: "500px" }}
+        >
+          <source src="../assets/demo.mp4" />
+        </video> */}
+
         <a href="#footer">
           <div className="bg-white mt-10 mb-10 lg:mb-0 p-3 rounded cursor-pointer">
             <h1 className="font-semibold flex items-center  space-x-5 text-blue-600 text-sm">
@@ -146,3 +159,14 @@ function Hero() {
 }
 
 export default Hero;
+
+// <iframe
+//   width="560"
+//   height="315"
+//   src="https://www.youtube.com/embed/YGpkSteQd5A?si=2JbWXecs9I-exSbO"
+//   title="YouTube video player"
+//   frameborder="0"
+//   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+//   referrerpolicy="strict-origin-when-cross-origin"
+//   allowfullscreen
+// ></iframe>;
