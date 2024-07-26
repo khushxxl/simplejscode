@@ -127,10 +127,10 @@ function Hero() {
         </div>
       </div>
 
-      <div className="mx-10 max-w-5xl  mt-10 w-full  flex  flex-col justify-center md:h-[80vh] md:p-4 h-fit items-center  bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border p-0  rounded-xl">
+      <div className="mx-10 max-w-5xl  mt-10 w-full  flex  flex-col justify-center h-[80vh] md:p-4 items-center  bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border p-0  rounded-xl">
         <iframe
           allow="autoplay"
-          className="max-w-4xl  rounded-lg mx-4  w-full  h-[70vh]"
+          className="  rounded-lg mx-4 md:w-full md:max-w-4xl md:h-[70vh] mt-10  w-[300px]  h-[200px]"
           src="https://www.youtube.com/embed/YGpkSteQd5A?si=2JbWXecs9I-exSbO?autoplay=1&muted=1"
         ></iframe>
 

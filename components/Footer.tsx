@@ -19,7 +19,7 @@ function Footer() {
         Get Access to the Database Today 🪄
       </p>
 
-      <div className=" bg-gradient-to-b from-sky-400 to-indigo-900 text-white max-w-sm md:max-w-5xl space-y-3 w-full mt-10 rounded-2xl items-center flex flex-col justify-center h-[80vh] md:h-[50vh]">
+      <div className=" bg-gradient-to-b from-sky-400 text-center to-indigo-900 text-white max-w-sm md:max-w-5xl space-y-3 w-full mt-10 rounded-2xl items-center flex flex-col justify-center h-[80vh] md:h-[50vh]">
         <h1 className="font-bold text-xl">Pre-Order Offer</h1>
         <h1 className="font-bold  text-3xl">One-Off Price for Lifetime</h1>
         <div className="border mt-2 max-w-xs w-full rounded-xl bg-white ">
