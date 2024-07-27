@@ -70,7 +70,18 @@ function Hero() {
       id="hero"
       className="max-w-6xl flex-col mx-auto w-full flex items-center mt-20"
     >
-      <p className="max-w-4xl text-center text-5xl font-bold ">
+      <a
+        href="https://www.producthunt.com/posts/simple-js-code?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-simple&#0045;js&#0045;code"
+        target="_blank"
+      >
+        <img
+          src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=474242&theme=light"
+          alt="Simple&#0032;JS&#0032;Code - &#0032;Hand&#0045;picked&#0032;collection&#0032;of&#0032;more&#0032;than&#0032;150&#0043;&#0032;JS&#0032;code&#0032;snippets&#0046;&#0032; | Product Hunt"
+          width="250"
+          height="54"
+        />
+      </a>
+      <p className="max-w-4xl text-center text-5xl mt-5 font-bold ">
         A Curated Directory of JS Code That You Can Copy Paste in Your Projects
       </p>
       {/* <Link href={"https://www.notion.so/"}>
